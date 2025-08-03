@@ -1,12 +1,12 @@
 # Head-Controlled Snake Game
 
-A classic Snake game where the snake is controlled by eye and head positionss using computer vision and MediaPipe face mesh detection.
+A classic Snake game where the snake is controlled by head positions using computer vision and MediaPipe face mesh detection.
 
 ## 🎮 Features
 
 - Control the snake by turning the head in different directions (up, down, left, right)
-- Uses MediaPipe face mesh for accurate iris and head position detection
-- The system calibrates to your neutral eye position
+- Uses MediaPipe face mesh for accurate head position detection
+- The system calibrates to your neutral head position
 - Snake stops when you look center
 - Collect food to grow and increase your score
 - Special yellow food appears every 5 points for extra rewards
@@ -31,19 +31,14 @@ A classic Snake game where the snake is controlled by eye and head positionss us
 
 ## 🎯 How to Play
 
-### Eye-Controlled Game
+### Head-Controlled Game
 
-1. **Test eye tracking first** (recommended):
-   ```bash
-   python test_eye_tracking.py
-   ```
-
-2. **Run the main game**:
+1. **Run the main game**:
    ```bash
    python main.py
    ```
 
-3. **Calibration**:
+2. **Calibration**:
    - When the game starts, look straight ahead at the camera
    - The system will calibrate for 30 frames (~1 second)
    - Keep your head relatively still during calibration
@@ -83,7 +78,7 @@ SnakeGame/
 
 ## 🛠️ Technical Details
 
-- **Eye and head Tracking**: MediaPipe Face Mesh for iris and face detection
+- **Head Tracking**: MediaPipe Face Mesh for face detection
 - **Game Engine**: Pygame for graphics and game loop
 - **Computer Vision**: OpenCV for image processing
 - **Threading**: Eye tracking runs in a separate thread for smooth gameplay
@@ -111,4 +106,5 @@ SnakeGame/
 - [ ] Customizable controls
 - [ ] Score leaderboard
 - [ ] Different game modes
+- [ ] Accurate eye ball control
 
